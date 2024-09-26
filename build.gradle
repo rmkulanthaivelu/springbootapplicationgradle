@@ -8,7 +8,13 @@ plugins {
     id 'java'
     id 'maven-publish'
 }
-
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.sample.spring.boot.Application'
+        )
+    }
+}
 repositories {
     mavenLocal()
     maven {
