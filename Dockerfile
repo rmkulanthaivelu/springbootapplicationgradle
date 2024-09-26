@@ -5,10 +5,10 @@ FROM openjdk:17-jdk-alpine
 WORKDIR /springbootapplication
 
 # Copy the built jar file into the container
-COPY build/libs/spring.boot.sample-0.0.1-SNAPSHOT.jar springbootapplication.jar
+COPY build/libs/spring.boot.sample-0.0.1-SNAPSHOT.jar springbootapplication-gradle.jar
 
 # Expose port 8080 (if your application runs on a specific port)
 EXPOSE 8080
 
 # Run the application
-CMD ["java", "-jar", "springbootapplication.jar"]
+CMD ["java", "-jar", "springbootapplication-gradle.jar"]
